@@ -1,3 +1,46 @@
 {
-    "modifications": []
+    "modifications": [
+        {
+            "type": "deleteNode",
+            "path": "/portal/rest",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/portal/external",
+            "value": null
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/portal",
+            "value": {
+                "principal": {}
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/root",
+            "value": {
+                "flfactppal": {
+                    "empresa": null,
+                    "ejercicios": null,
+                    "secuenciasejercicios": null,
+                    "clientes": null,
+                    "dirclientes": null,
+                    "usuarios": null,
+                    "agentes": null
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfactppal",
+            "value": {
+                "flcontppal": {
+                    "co_subcuentascli": null,
+                    "cuentasbcocli": null
+                }
+            }
+        }
+    ]
 }

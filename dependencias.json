@@ -1,9 +1,13 @@
 {
-    "fun_aq": null,
+    "fun_aq": "fun_oficial",
     "fk": "True",
     "dependencias": [
         {
             "key": "baseparche",
+            "version": "v1.0"
+        },
+        {
+            "key": "datos_generales",
             "version": "v1.0"
         }
     ]

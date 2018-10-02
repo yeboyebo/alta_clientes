@@ -1,0 +1,12 @@
+{
+    "items": [
+        {
+            "NAME": "clientes",
+            "TEXT": "Clientes",
+            "URL": "principal/clientes/master",
+            "ICON": "dashboard",
+            "VISIBLE": true,
+            "COLOR": "rgb(30, 170, 30)"
+        }
+    ]
+}

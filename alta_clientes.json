@@ -18,7 +18,124 @@
         ],
         "patchScript": [],
         "deleteFile": [],
-        "addFile": []
+        "addFile": [
+            {
+                "path": "apps/principal/templates/principal/",
+                "name": "app_principal__menu_principal.json"
+            },
+            {
+                "path": "apps/principal/templates/principal/plantillas/",
+                "name": "app_principal__clientes.json"
+            },
+            {
+                "path": "apps/principal/templates/principal/plantillas/",
+                "name": "app_principal__newrecordclientes.json"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__empresa.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__empresa_def.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__clientes.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__clientes_def.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__dirclientes.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__dirclientes_def.py"
+            },
+            {
+                "path": "apps/principal/viewset/",
+                "name": "app_principal__views_principal.py"
+            },
+            {
+                "path": "apps/portal/templates/portal/",
+                "name": "app_portal__menu_portal.json"
+            },
+            {
+                "path": "apps/portal/viewset/",
+                "name": "app_portal__views_portal.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__usuarios.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__usuarios_def.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__agentes.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__agentes_def.py"
+            },
+            {
+                "path": "apps/portal/templates/portal/",
+                "name": "app_portal__login.html"
+            },
+            {
+                "path": "apps/portal/templates/portal/",
+                "name": "app_portal__index.html"
+            },
+            {
+                "name": "app_principal__masterclientes.json",
+                "path": "apps/principal/templates/principal/plantillas/"
+            },
+            {
+                "name": "app_principal__dirclientes.json",
+                "path": "apps/principal/templates/principal/plantillas/"
+            },
+            {
+                "name": "app_principal__newrecorddirclientes.json",
+                "path": "apps/principal/templates/principal/plantillas/"
+            },
+            {
+                "name": "model_flfactppal__ejercicios.py",
+                "path": "models/flfactppal/"
+            },
+            {
+                "name": "model_flfactppal__ejercicios_def.py",
+                "path": "models/flfactppal/"
+            },
+            {
+                "name": "model_flfactppal__secuenciasejercicios.py",
+                "path": "models/flfactppal/"
+            },
+            {
+                "name": "model_flfactppal__secuenciasejercicios_def.py",
+                "path": "models/flfactppal/"
+            },
+            {
+                "name": "model_flcontppal__co_subcuentascli.py",
+                "path": "models/flcontppal/"
+            },
+            {
+                "name": "model_flcontppal__co_subcuentascli_def.py",
+                "path": "models/flcontppal/"
+            },
+            {
+                "name": "model_flcontppal__cuentasbcocli.py",
+                "path": "models/flcontppal/"
+            },
+            {
+                "name": "model_flcontppal__cuentasbcocli_def.py",
+                "path": "models/flcontppal/"
+            }
+        ]
     },
     "name": "alta_clientes"
 }

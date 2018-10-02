@@ -1,0 +1,66 @@
+{
+	"querystring": {},
+    "schema": {
+        "dirclientes": {
+            "rel": "codcliente",
+            "querystring": {}
+        }
+    },
+    "layout": {
+        "multiNewRecordClientes": {
+            "componente": "YBMultiForm",
+            "mainPrefix": "clientes",           
+            "submit": "create",
+            "success": [{"slot": "return"}],
+            "return": true,
+            "forms": {
+                "formClientes": {
+                    "componente": "YBForm",
+                    "prefix": "clientes",
+                    "class": "claseGrid",
+                    "groupbox": "acordeon",
+                    "fields": {
+                        "gb__datosGenerales": {
+                            "title": "Datos generales",
+                            "fields": {
+                                "nombre": {},
+		                        "tipoidfiscal": {},
+		                        "cifnif": {},
+		                        "nombrecomercial": {},
+		                        "telefono1": {},
+		                        "email": {}
+                            }
+                        }
+                    },
+                    "exclude": {}
+                },
+                "formDireccion": {
+                    "componente": "YBForm",
+                    "prefix": "dirclientes",
+                    "class": "claseGrid",
+                    "groupbox": "acordeon",
+                    "fields": {
+                        "gb__Direccion": {
+                            "title": "",
+                            "fields": {
+		                        "descripcion": {},
+		                        "dirtipovia": {},
+		                        "direccion": {},
+		                        "dirnum": {},
+		                        "dirotros": {},
+		                        "apartado": {},
+		                        "codpostal": {},
+		                        "ciudad": {},
+		                        "idprovincia": {},
+		                        "codpais": {},
+		                        "telefono": {}
+	                    	}
+                        }
+                    },
+                    "exclude": {}
+                }
+            }
+        }
+    },
+    "acciones": {}
+}

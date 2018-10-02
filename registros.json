@@ -1,3 +1,26 @@
 {
-    "modifications": []
+    "modifications": [
+        {
+            "type": "insertAfterNode",
+            "path": "/root",
+            "value": {
+                "flfactppal": {
+                    "empresa": null,
+                    "ejercicios": null,
+                    "secuenciasejercicios": null,
+                    "clientes": null,
+                    "dirclientes": null
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfactppal",
+            "value": {
+                "flcontppal": {
+                    "co_subcuentascli": null
+                }
+            }
+        }
+    ]
 }

@@ -1,0 +1,36 @@
+{
+    "querystring": {},
+    "schema": {},
+    "layout": {
+        "formRecordDirclientes": {
+            "prefix": "dirclientes",
+            "componente": "YBForm",
+            "class": "claseGrid",
+            "submit": "update",
+            "success": [{"slot": "return"}],
+            "groupbox": "acordeon",
+            "return": true,
+            "fields": {
+                "gb__datosGenerales": {
+                    "title": "Datos generales",
+                    "fields": {
+                        "descripcion": {},
+                        "dirtipovia": {},
+                        "direccion": {},
+                        "dirnum": {},
+                        "dirotros": {},
+                        "apartado": {},
+                        "codpostal": {},
+                        "ciudad": {},
+                        "idprovincia": {},
+                        "provincia": {},
+                        "codpais": {},
+                        "telefono": {}
+                    }
+                }
+            },
+            "exclude": {}
+        }
+    },
+    "acciones": {}
+}
