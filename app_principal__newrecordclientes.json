@@ -1,5 +1,5 @@
 {
-	"querystring": {},
+    "querystring": {},
     "schema": {
         "dirclientes": {
             "rel": "codcliente",
@@ -11,8 +11,9 @@
             "componente": "YBMultiForm",
             "mainPrefix": "clientes",           
             "submit": "create",
-            "success": [{"slot": "return"}],
             "return": true,
+            "saveEdit": true,
+            "saveReturn": true,
             "forms": {
                 "formClientes": {
                     "componente": "YBForm",
@@ -24,11 +25,11 @@
                             "title": "Datos generales",
                             "fields": {
                                 "nombre": {},
-		                        "tipoidfiscal": {},
-		                        "cifnif": {},
-		                        "nombrecomercial": {},
-		                        "telefono1": {},
-		                        "email": {}
+                                "tipoidfiscal": {},
+                                "cifnif": {},
+                                "nombrecomercial": {},
+                                "telefono1": {},
+                                "email": {}
                             }
                         }
                     },
@@ -43,18 +44,21 @@
                         "gb__Direccion": {
                             "title": "",
                             "fields": {
-		                        "descripcion": {},
-		                        "dirtipovia": {},
-		                        "direccion": {},
-		                        "dirnum": {},
-		                        "dirotros": {},
-		                        "apartado": {},
-		                        "codpostal": {},
-		                        "ciudad": {},
-		                        "idprovincia": {},
-		                        "codpais": {},
-		                        "telefono": {}
-	                    	}
+                                "descripcion": {},
+                                "dirtipovia": {},
+                                "direccion": {},
+                                "dirnum": {},
+                                "dirotros": {},
+                                "apartado": {},
+                                "codpostal": {},
+                                "ciudad": {},
+                                "idprovincia": {},
+                                "provincia": {},
+                                "codpais": {},
+                                "telefono": {},
+                                "domfacturacion": {},
+                                "domenvio": {}
+                            }
                         }
                     },
                     "exclude": {}

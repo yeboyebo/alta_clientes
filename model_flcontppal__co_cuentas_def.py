@@ -37,14 +37,14 @@ class alta_clientes(interna):
         return fields
 
     def alta_clientes_getDesc(self):
-        desc = "descripcion"
+        desc = None
         return desc
 
     def __init__(self, context=None):
         super(alta_clientes, self).__init__(context)
 
     def initValidation(self, name, data=None):
-        return self.ctx.alta_clientes_initValidation(name, data=None)
+        return self.ctx.alta_clientes_initValidation(name, data)
 
     def iniciaValoresLabel(self, model=None, template=None, cursor=None):
         return self.ctx.alta_clientes_iniciaValoresLabel(model, template, cursor)

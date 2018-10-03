@@ -1,18 +1,20 @@
-# @class_declaration interna_dirclientes #
-from YBUTILS.viewREST import helpers
-from models.flfactppal import models as modelos
+# @class_declaration interna_co_subcuentas #
 import importlib
 
+from YBUTILS.viewREST import helpers
 
-class interna_dirclientes(modelos.mtd_dirclientes, helpers.MixinConAcciones):
+from models.flcontppal import models as modelos
+
+
+class interna_co_subcuentas(modelos.mtd_co_subcuentas, helpers.MixinConAcciones):
     pass
 
     class Meta:
         proxy = True
 
 
-# @class_declaration alta_clientes_dirclientes #
-class alta_clientes_dirclientes(interna_dirclientes, helpers.MixinConAcciones):
+# @class_declaration alta_clientes_co_subcuentas #
+class alta_clientes_co_subcuentas(interna_co_subcuentas, helpers.MixinConAcciones):
     pass
 
     class Meta:
@@ -37,15 +39,15 @@ class alta_clientes_dirclientes(interna_dirclientes, helpers.MixinConAcciones):
         return form.iface.getDesc()
 
 
-# @class_declaration dirclientes #
-class dirclientes(alta_clientes_dirclientes, helpers.MixinConAcciones):
+# @class_declaration co_subcuentas #
+class co_subcuentas(alta_clientes_co_subcuentas, helpers.MixinConAcciones):
     pass
 
     class Meta:
         proxy = True
 
 
-definitions = importlib.import_module("models.flfactppal.dirclientes_def")
+definitions = importlib.import_module("models.flcontppal.co_subcuentas_def")
 form = definitions.FormInternalObj()
 form._class_init()
 form.iface.ctx = form.iface

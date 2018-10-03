@@ -3,7 +3,10 @@
     "schema": {
         "dirclientes": {
             "rel": "codcliente",
-            "querystring": {}
+            "querystring": {
+            	 "p_l": 1,
+            	"s_domfacturacion__exact": true
+            }
         }
     },
     "layout": {
@@ -53,8 +56,11 @@
 		                        "codpostal": {},
 		                        "ciudad": {},
 		                        "idprovincia": {},
+		                        "provincia": {},
 		                        "codpais": {},
-		                        "telefono": {}
+		                        "telefono": {},
+                                "domfacturacion": {},
+                                "domenvio": {}
 	                    	}
                         }
                     },

@@ -4,6 +4,10 @@
             {
                 "path": "config/",
                 "name": "dependencias.json"
+            },
+            {
+                "name": "settings.py",
+                "path": "AQNEXT/"
             }
         ],
         "patchJson": [
@@ -14,15 +18,15 @@
             {
                 "path": "config/",
                 "name": "registros.json"
+            },
+            {
+                "path": "apps/principal/templates/principal/",
+                "name": "app_principal__menu_principal.json"
             }
         ],
         "patchScript": [],
         "deleteFile": [],
         "addFile": [
-            {
-                "path": "apps/principal/templates/principal/",
-                "name": "app_principal__menu_principal.json"
-            },
             {
                 "path": "apps/principal/templates/principal/plantillas/",
                 "name": "app_principal__clientes.json"
@@ -133,6 +137,22 @@
             },
             {
                 "name": "model_flcontppal__cuentasbcocli_def.py",
+                "path": "models/flcontppal/"
+            },
+            {
+                "name": "model_flcontppal__co_cuentas.py",
+                "path": "models/flcontppal/"
+            },
+            {
+                "name": "model_flcontppal__co_cuentas_def.py",
+                "path": "models/flcontppal/"
+            },
+            {
+                "name": "model_flcontppal__co_subcuentas.py",
+                "path": "models/flcontppal/"
+            },
+            {
+                "name": "model_flcontppal__co_subcuentas_def.py",
                 "path": "models/flcontppal/"
             }
         ]

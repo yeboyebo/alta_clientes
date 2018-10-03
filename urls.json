@@ -2,34 +2,83 @@
     "modifications": [
         {
             "type": "insertAfterNode",
-            "path": "/portal",
+            "path": "/models/flfactppal/empresa",
             "value": {
-                "principal": {}
+                "ejercicios": null
             }
         },
         {
             "type": "insertAfterNode",
-            "path": "/models/root",
+            "path": "/models/flfactppal/ejercicios",
             "value": {
-                "flfactppal": {
-                    "empresa": null,
-                    "ejercicios": null,
-                    "secuenciasejercicios": null,
-                    "clientes": null,
-                    "dirclientes": null,
-                    "usuarios": null,
-                    "agentes": null
-                }
+                "secuenciasejercicios": null
             }
         },
         {
             "type": "insertAfterNode",
-            "path": "/models/flfactppal",
+            "path": "/models/flfactppal/secuenciasejercicios",
             "value": {
-                "flcontppal": {
-                    "co_subcuentascli": null,
-                    "cuentasbcocli": null
-                }
+                "clientes": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfactppal/clientes",
+            "value": {
+                "dirclientes": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfactppal/dirclientes",
+            "value": {
+                "usuarios": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfactppal/usuarios",
+            "value": {
+                "agentes": null
+            }
+        },
+        {
+            "type": "deleteNode",
+            "path": "/models/flfactppal/factppal_general",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/models/flfactppal/formaspago",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/models/flfactppal/divisas",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/models/flfactppal/provincias",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/models/flfactppal/paises",
+            "value": null
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flcontppal/cuentasbcocli",
+            "value": {
+                "co_cuentas": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flcontppal/co_cuentas",
+            "value": {
+                "co_subcuentas": null
             }
         }
     ]
