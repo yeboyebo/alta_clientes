@@ -1,73 +1,126 @@
 {
-	"querystring": {},
+    "querystring": {},
     "schema": {
         "dirclientes": {
             "rel": "codcliente",
             "querystring": {
-            	 "p_l": 1,
-            	"s_domfacturacion__exact": true
+                "p_l": 50,
+                "p_c": 1,
+                "o_1": "-fechaalta"
             }
         }
     },
     "layout": {
-        "multiNewRecordClientes": {
-            "componente": "YBMultiForm",
-            "mainPrefix": "clientes",
+        "formRecordClientes": {
+            "prefix": "clientes",
+            "componente": "YBForm",
+            "class": "claseGrid",
             "submit": "update",
+            "success": [{"slot": "return"}],
+            "groupbox": "acordeon",
             "return": true,
-            "saveEdit": true,
-            "saveReturn": true,
-            "forms": {
-                "formClientes": {
-                    "componente": "YBForm",
-                    "prefix": "clientes",
-                    "class": "claseGrid",
-                    "groupbox": "acordeon",
+            "fields": {
+               "gb__datosGenerales": {
+                    "title": "Datos generales",
                     "fields": {
-                        "gb__datosGenerales": {
-                            "title": "Datos generales",
-                            "fields": {
-                                "nombre": {},
-		                        "tipoidfiscal": {},
-		                        "cifnif": {},
-		                        "nombrecomercial": {},
-		                        "telefono1": {},
-		                        "email": {}
-                            }
-                        }
-                    },
-                    "exclude": {}
+                        "nombre": {},
+                        "tipoidfiscal": {},
+                        "cifnif": {},
+                        "nombrecomercial": {},
+                        "telefono1": {},
+                        "email": {},
+                        "codgrupo": {}
+                    }
                 },
-                "formDireccion": {
-                    "componente": "YBForm",
-                    "prefix": "dirclientes",
-                    "class": "claseGrid",
-                    "groupbox": "acordeon",
+                "gb__comercial": {
+                    "title": "Comercial",
                     "fields": {
-                        "gb__Direccion": {
-                            "title": "",
-                            "fields": {
-		                        "descripcion": {},
-		                        "dirtipovia": {},
-		                        "direccion": {},
-		                        "dirnum": {},
-		                        "dirotros": {},
-		                        "apartado": {},
-		                        "codpostal": {},
-		                        "ciudad": {},
-		                        "idprovincia": {},
-		                        "provincia": {},
-		                        "codpais": {},
-		                        "telefono": {},
-                                "domfacturacion": {},
-                                "domenvio": {}
-	                    	}
+                        "codpago": {},
+                        "codserie": {},
+                        "coddivisa": {},
+                        "codtiporappel": {},
+                        "codagente": {},
+                        "regimeniva": {},
+                        "recargo": {},
+                        "riesgomax": {},
+                        "copiasfactura": {},
+                        "riesgoalcanzado": {}
+                    }
+                }
+            }
+        },
+        "groupBoxDirecciones": {
+            "componente": "YBGroupBox",
+            "label": "Direcciones",
+            "className": "",
+            "layout": {
+                "dirclientesGrid": {
+                    "label": "Direcciones",
+                    "componente": "YBGrid",
+                    "prefix": "dirclientes",
+                    "className": "claseGrid",
+                    "multiselectable": true,
+                    "columns": [
+                        {"tipo": "field", "key": "descripcion", "width": 60},
+                        {"tipo": "field", "key": "domfacturacion", "width": 20},
+                        {"tipo": "field", "key": "domenvio", "width": 20},
+                        {
+                            "tipo": "act",
+                            "key": "delete",
+                            "label": "Borrar Linea",
+                            "success": [
+                                {"slot": "refrescar"}
+                            ]
                         }
-                    },
-                    "exclude": {}
+                    ],
+                    "rowclick": "link",
+                    "accionesGrid": [
+                        {
+                            "tipo": "button",
+                            "key": "direnvio",
+                            "label": "Dirección de envio",
+                            "success": [
+                                {"slot": "refrescar"}
+                            ]
+                        },
+                        {
+                            "tipo": "button",
+                            "key": "dirfacturacion",
+                            "label": "Dirección de facturación",
+                            "success": [
+                                {"slot": "refrescar"}
+                            ]
+                        },
+                        {
+                            "key": "nuevaLinea",
+                            "label": "Nuevo",
+                            "success": []
+                        }
+                    ]
                 }
             }
         }
     },
-    "acciones": {}
+    "acciones": {
+        "delete": {
+            "action": "deleteRow",
+            "icon": "delete"
+        },
+        "nuevaLinea": {
+            "action": "newRow",
+            "icon": "add_circle"
+        },
+        "direnvio": {
+            "action": "gridAction",
+            "icon": "send",
+            "prefix": "dirclientes",
+            "serverAction": "cambiarDomEnvio"
+        },
+        "dirfacturacion": {
+            "action": "gridAction",
+            "icon": "home",
+            "prefix": "dirclientes",
+            "serverAction": "cambiarDomFacturacion"
+        }
+    }
 }

@@ -36,6 +36,14 @@ class alta_clientes_dirclientes(interna_dirclientes, helpers.MixinConAcciones):
     def getDesc():
         return form.iface.getDesc()
 
+    @helpers.decoradores.accion(aqparam=["oParam"])
+    def cambiarDomFacturacion(self, oParam):
+        return form.iface.cambiarDomFacturacion(self, oParam)
+
+    @helpers.decoradores.accion(aqparam=["oParam"])
+    def cambiarDomEnvio(self, oParam):
+        return form.iface.cambiarDomEnvio(self, oParam)
+
 
 # @class_declaration dirclientes #
 class dirclientes(alta_clientes_dirclientes, helpers.MixinConAcciones):

@@ -3,7 +3,8 @@
     "schema": {
         "dirclientes": {
             "rel": "codcliente",
-            "querystring": {}
+            "querystring": {},
+            "create": true
         }
     },
     "layout": {
