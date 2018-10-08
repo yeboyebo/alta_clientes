@@ -20,6 +20,20 @@
             }
         },
         {
+            "type": "insertAfterNode",
+            "path": "/flfactppal/dirclientes",
+            "value": {
+                "gruposclientes": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfactppal/gruposclientes",
+            "value": {
+                "series": null
+            }
+        },
+        {
             "type": "deleteNode",
             "path": "/flfactppal/factppal_general",
             "value": null

@@ -43,6 +43,20 @@
             }
         },
         {
+            "type": "insertAfterNode",
+            "path": "/models/flfactppal/agentes",
+            "value": {
+                "gruposclientes": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfactppal/gruposclientes",
+            "value": {
+                "series": null
+            }
+        },
+        {
             "type": "deleteNode",
             "path": "/models/flfactppal/factppal_general",
             "value": null

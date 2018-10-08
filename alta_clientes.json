@@ -154,6 +154,22 @@
             {
                 "name": "model_flcontppal__co_subcuentas_def.py",
                 "path": "models/flcontppal/"
+            },
+            {
+                "name": "model_flfactppal__gruposclientes.py",
+                "path": "models/flfactppal/"
+            },
+            {
+                "name": "model_flfactppal__gruposclientes_def.py",
+                "path": "models/flfactppal/"
+            },
+            {
+                "name": "model_flfactppal__series.py",
+                "path": "models/flfactppal/"
+            },
+            {
+                "name": "model_flfactppal__series_def.py",
+                "path": "models/flfactppal/"
             }
         ]
     },
