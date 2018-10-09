@@ -37,14 +37,6 @@
             },
             {
                 "path": "models/flfactppal/",
-                "name": "model_flfactppal__empresa.py"
-            },
-            {
-                "path": "models/flfactppal/",
-                "name": "model_flfactppal__empresa_def.py"
-            },
-            {
-                "path": "models/flfactppal/",
                 "name": "model_flfactppal__clientes.py"
             },
             {
@@ -108,38 +100,6 @@
                 "path": "apps/principal/templates/principal/plantillas/"
             },
             {
-                "name": "model_flfactppal__ejercicios.py",
-                "path": "models/flfactppal/"
-            },
-            {
-                "name": "model_flfactppal__ejercicios_def.py",
-                "path": "models/flfactppal/"
-            },
-            {
-                "name": "model_flfactppal__secuenciasejercicios.py",
-                "path": "models/flfactppal/"
-            },
-            {
-                "name": "model_flfactppal__secuenciasejercicios_def.py",
-                "path": "models/flfactppal/"
-            },
-            {
-                "name": "model_flcontppal__co_subcuentascli.py",
-                "path": "models/flcontppal/"
-            },
-            {
-                "name": "model_flcontppal__co_subcuentascli_def.py",
-                "path": "models/flcontppal/"
-            },
-            {
-                "name": "model_flcontppal__cuentasbcocli.py",
-                "path": "models/flcontppal/"
-            },
-            {
-                "name": "model_flcontppal__cuentasbcocli_def.py",
-                "path": "models/flcontppal/"
-            },
-            {
                 "name": "model_flcontppal__co_cuentas.py",
                 "path": "models/flcontppal/"
             },
@@ -161,14 +121,6 @@
             },
             {
                 "name": "model_flfactppal__gruposclientes_def.py",
-                "path": "models/flfactppal/"
-            },
-            {
-                "name": "model_flfactppal__series.py",
-                "path": "models/flfactppal/"
-            },
-            {
-                "name": "model_flfactppal__series_def.py",
                 "path": "models/flfactppal/"
             }
         ]

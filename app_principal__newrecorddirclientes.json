@@ -22,7 +22,7 @@
                         "apartado": {},
                         "codpostal": {},
                         "ciudad": {},
-                        "idprovincia": {},
+                        "idprovincia": {"auto_name": "Provincia"},           
                         "codpais": {},
                         "telefono": {}
                     }

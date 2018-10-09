@@ -2,21 +2,7 @@
     "modifications": [
         {
             "type": "insertAfterNode",
-            "path": "/models/flfactppal/empresa",
-            "value": {
-                "ejercicios": null
-            }
-        },
-        {
-            "type": "insertAfterNode",
-            "path": "/models/flfactppal/ejercicios",
-            "value": {
-                "secuenciasejercicios": null
-            }
-        },
-        {
-            "type": "insertAfterNode",
-            "path": "/models/flfactppal/secuenciasejercicios",
+            "path": "/models/flfactppal/root",
             "value": {
                 "clientes": null
             }
@@ -51,39 +37,7 @@
         },
         {
             "type": "insertAfterNode",
-            "path": "/models/flfactppal/gruposclientes",
-            "value": {
-                "series": null
-            }
-        },
-        {
-            "type": "deleteNode",
-            "path": "/models/flfactppal/factppal_general",
-            "value": null
-        },
-        {
-            "type": "deleteNode",
-            "path": "/models/flfactppal/formaspago",
-            "value": null
-        },
-        {
-            "type": "deleteNode",
-            "path": "/models/flfactppal/divisas",
-            "value": null
-        },
-        {
-            "type": "deleteNode",
-            "path": "/models/flfactppal/provincias",
-            "value": null
-        },
-        {
-            "type": "deleteNode",
-            "path": "/models/flfactppal/paises",
-            "value": null
-        },
-        {
-            "type": "insertAfterNode",
-            "path": "/models/flcontppal/cuentasbcocli",
+            "path": "/models/flcontppal/root",
             "value": {
                 "co_cuentas": null
             }

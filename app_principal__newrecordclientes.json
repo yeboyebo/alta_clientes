@@ -53,8 +53,7 @@
                                 "apartado": {},
                                 "codpostal": {},
                                 "ciudad": {},
-                                "idprovincia": {},
-                                "provincia": {},
+                                "idprovincia": {"auto_name": "Provincia"},                        
                                 "codpais": {},
                                 "telefono": {}
                             }
