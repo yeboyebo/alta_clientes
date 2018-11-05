@@ -16,8 +16,15 @@
                 {"tipo": "field", "listpos": "title", "key": "nombre", "width": 150, "flex": 2},
                 {"tipo": "field", "listpos": "subtitle", "key": "cifnif"},
                 {"tipo": "field", "listpos": "body", "key": "nombrecomercial"},
-                {"tipo": "field", "listpos": "body", "key": "telefono1", "label": "Teléfono"}
-            ],
+                {"tipo": "field", "listpos": "body", "key": "telefono1", "label": "Teléfono"},
+	            {
+	                "tipo": "act",
+	                "key": "subir",
+	                "label": "Subir doc. SEPA",
+						"success": [{"slot": "toast", "tipo": "success", "mensaje": "Documento subido correctamente"}, {"slot": "refrescar"}],
+	                    "error": [{"slot": "toast", "mensaje": "Error inesperado, consulte administrador"}]
+	            }
+            ],            
             "rowclick": "link"
         },
         "newRecordTelest": {
@@ -30,6 +37,12 @@
         "delete": {
             "action": "deleteRow",
             "icon": "delete"
+        },
+        "subir": {
+            "action": "legacy",
+            "serverAction": "subirDocSepa",
+            "prefix": "clientes",
+            "icon": "link"
         }
     }
 }

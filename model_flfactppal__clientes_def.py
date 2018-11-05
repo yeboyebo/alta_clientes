@@ -40,6 +40,10 @@ class alta_clientes(interna):
         desc = "nombre"
         return desc
 
+    def alta_clientes_subirDocSepa(self, model, oParam):
+        response = True
+        return response
+
     def __init__(self, context=None):
         super(alta_clientes, self).__init__(context)
 
@@ -60,6 +64,9 @@ class alta_clientes(interna):
 
     def getDesc(self):
         return self.ctx.alta_clientes_getDesc()
+
+    def subirDocSepa(self, model, oParam):
+        return self.ctx.alta_clientes_subirDocSepa(model, oParam)
 
 
 # @class_declaration head #

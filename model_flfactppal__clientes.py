@@ -36,6 +36,10 @@ class alta_clientes_clientes(interna_clientes, helpers.MixinConAcciones):
     def getDesc():
         return form.iface.getDesc()
 
+    @helpers.decoradores.accion(aqparam=["oParam"])
+    def subirDocSepa(self, oParam):
+        return form.iface.subirDocSepa(self, oParam)
+
 
 # @class_declaration clientes #
 class clientes(alta_clientes_clientes, helpers.MixinConAcciones):

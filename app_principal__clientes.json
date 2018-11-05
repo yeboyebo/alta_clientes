@@ -47,8 +47,8 @@
                         "riesgoalcanzado": {}
                     }
                 }
-            }
-        },
+        	}
+        },      
         "groupBoxDirecciones": {
             "componente": "YBGroupBox",
             "label": "Direcciones",

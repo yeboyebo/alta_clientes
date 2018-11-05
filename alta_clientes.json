@@ -52,10 +52,6 @@
                 "name": "model_flfactppal__dirclientes_def.py"
             },
             {
-                "path": "apps/principal/viewset/",
-                "name": "app_principal__views_principal.py"
-            },
-            {
                 "path": "apps/portal/templates/portal/",
                 "name": "app_portal__menu_portal.json"
             },
