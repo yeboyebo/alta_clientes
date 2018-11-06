@@ -12,6 +12,7 @@ class interna(qsatype.objetoBase):
 
 # @class_declaration alta_clientes #
 from YBLEGACY.constantes import *
+from YBUTILS import gesDoc
 
 
 class alta_clientes(interna):
@@ -42,6 +43,8 @@ class alta_clientes(interna):
 
     def alta_clientes_subirDocSepa(self, model, oParam):
         response = True
+        if not gesDoc.fileUpload("clientes", model.codcliente, oParam['FILES']):
+            return False
         return response
 
     def __init__(self, context=None):

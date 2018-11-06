@@ -40,9 +40,38 @@
         },
         "subir": {
             "action": "legacy",
-            "serverAction": "subirDocSepa",
             "prefix": "clientes",
-            "icon": "link"
+            "serverAction": "subirDocSepa",
+            "icon": "link",
+            "params": [
+                {
+                    "componente": "YBFileInput",
+                    "prefix": "otros",
+                    "className": "",
+                    "key": "adjunto",
+                    "label": "SUBIR",
+                    "prefix": "clientes",
+                    "tipo": 30,
+                    "style": {
+                        "width": "100%"
+                    },
+                    "action": "uploadFile",
+                    "autoUpload": false,
+                    "fields": {
+                        "field_comentario": {
+                            "componente": "YBFieldDB",
+                            "prefix": "otros",
+                            "className": "",
+                            "key": "nombre",
+                            "label": "Nombre documento ...",
+                            "tipo": 6,
+                            "style": {
+                                "width": "100%"
+                            }
+                        }
+                    }
+                }
+            ]
         }
     }
 }
