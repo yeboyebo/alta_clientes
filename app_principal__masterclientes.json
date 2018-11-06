@@ -55,7 +55,7 @@
                     "style": {
                         "width": "100%"
                     },
-                    "action": "uploadFile",
+                    "action": "subirDocSepa",
                     "autoUpload": false,
                     "fields": {
                         "field_comentario": {
