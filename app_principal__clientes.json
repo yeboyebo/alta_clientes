@@ -18,13 +18,13 @@
                 "cargaDocSEPA": {
                     "componente": "YBButton",
                     "prefix": "clientes",
-                    "icon": "book",
+                    "label": "S€PA",
                     "className": "floatRight",
                     "buttonType": "raised",
                     "action": {
                         "key": "subir",
 	                	"label": "Subir doc. SEPA",
-						"success": [{"slot": "toast", "tipo": "success", "mensaje": "Documento subido correctamente"}, {"slot": "refrescar"}],
+						"success": [{"slot": "toast", "tipo": "success", "mensaje": "Documento cargado correctamente"}, {"slot": "refrescar"}],
 	                    "error": [{"slot": "toast", "mensaje": "Error inesperado, consulte administrador"}]
                     }
                 }
