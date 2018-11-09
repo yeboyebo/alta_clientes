@@ -11,6 +11,25 @@
         }
     },
     "layout": {
+    	"groupBoxCargaSEPA": {
+            "componente": "YBGroupBox",
+            "className": "",
+            "layout": {
+                "cargaDocSEPA": {
+                    "componente": "YBButton",
+                    "prefix": "clientes",
+                    "icon": "book",
+                    "className": "floatRight",
+                    "buttonType": "raised",
+                    "action": {
+                        "key": "subir",
+	                	"label": "Subir doc. SEPA",
+						"success": [{"slot": "toast", "tipo": "success", "mensaje": "Documento subido correctamente"}, {"slot": "refrescar"}],
+	                    "error": [{"slot": "toast", "mensaje": "Error inesperado, consulte administrador"}]
+                    }
+                }
+            }
+        },
         "formRecordClientes": {
             "prefix": "clientes",
             "componente": "YBForm",
@@ -63,15 +82,7 @@
                     "columns": [
                         {"tipo": "field", "key": "descripcion", "width": 60},
                         {"tipo": "field", "key": "domfacturacion", "width": 20},
-                        {"tipo": "field", "key": "domenvio", "width": 20},
-                        {
-                            "tipo": "act",
-                            "key": "delete",
-                            "label": "Borrar Linea",
-                            "success": [
-                                {"slot": "refrescar"}
-                            ]
-                        }
+                        {"tipo": "field", "key": "domenvio", "width": 20}
                     ],
                     "rowclick": "link",
                     "accionesGrid": [
@@ -121,6 +132,29 @@
             "icon": "home",
             "prefix": "dirclientes",
             "serverAction": "cambiarDomFacturacion"
+        },
+        "subir": {
+            "action": "legacy",
+            "prefix": "clientes",
+            "serverAction": "subirDocSepa",
+            "icon": "link",
+            "params": [
+                {
+                    "componente": "YBFileInput",
+                    "prefix": "otros",
+                    "className": "",
+                    "key": "adjunto",
+                    "label": "SUBIR",
+                    "prefix": "clientes",
+                    "tipo": 30,
+                    "style": {
+                        "width": "100%"
+                    },
+                    "action": "subirDocSepa",
+                    "autoUpload": false,
+                    "fileRequired": true
+                }
+            ]
         }
     }
 }

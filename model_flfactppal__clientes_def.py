@@ -43,7 +43,8 @@ class alta_clientes(interna):
 
     def alta_clientes_subirDocSepa(self, model, oParam):
         response = True
-        if not gesDoc.fileUpload("clientes", model.codcliente, oParam['FILES'], oParam["nombre"]):
+        nombre = "SEPA." + model.codcliente
+        if not gesDoc.fileUpload("clientes", model.codcliente, oParam['FILES'], nombre=nombre, tipo="Documento"):
             return False
         return response
 
