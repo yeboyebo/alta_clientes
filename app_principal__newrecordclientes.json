@@ -45,7 +45,6 @@
                         "gb__Direccion": {
                             "title": "",
                             "fields": {
-                                "descripcion": {},
                                 "dirtipovia": {},
                                 "direccion": {},
                                 "dirnum": {},
