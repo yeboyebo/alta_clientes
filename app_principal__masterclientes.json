@@ -1,30 +1,96 @@
 {
-    "querystring": {
-        "p_l": 50,
-        "p_c": true,
-        "o_1": "nombre",
-        "o_2": "codcliente"
-    },
-    "schema": {},
-    "layout": {
-        "masterClientes": {
-            "componente": "YBGrid",
-            "label": "Clientes",
-            "prefix": "clientes",
-            "filter": "buscador",
-            "columns": [
-                {"tipo": "field", "listpos": "title", "key": "nombre", "width": 150, "flex": 2},
-                {"tipo": "field", "listpos": "subtitle", "key": "cifnif"},
-                {"tipo": "field", "listpos": "body", "key": "nombrecomercial"},
-                {"tipo": "field", "listpos": "body", "key": "telefono1", "label": "Teléfono"}
-            ],            
-            "rowclick": "link"
+    "modifications": [
+        {
+            "type": "insertAfterNode",
+            "path": "/querystring/root",
+            "value": {
+                "p_l": 50
+            }
         },
-        "newRecordTelest": {
-            "componente": "YBNewRecord",
-            "class": "info",
-            "icon": "add"
+        {
+            "type": "insertAfterNode",
+            "path": "/querystring/p_l",
+            "value": {
+                "p_c": true
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/querystring/p_c",
+            "value": {
+                "o_1": "nombre"
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/querystring/o_1",
+            "value": {
+                "o_2": "codcliente"
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/layout/root",
+            "value": {
+                "masterClientes": {
+                    "componente": "YBGrid",
+                    "label": "Clientes",
+                    "prefix": "clientes",
+                    "filter": "buscador",
+                    "columns": [
+                        {
+                            "tipo": "field",
+                            "listpos": "title",
+                            "key": "nombre",
+                            "width": 150,
+                            "flex": 2
+                        },
+                        {
+                            "tipo": "field",
+                            "listpos": "subtitle",
+                            "key": "cifnif"
+                        },
+                        {
+                            "tipo": "field",
+                            "listpos": "body",
+                            "key": "nombrecomercial"
+                        },
+                        {
+                            "tipo": "field",
+                            "listpos": "body",
+                            "key": "telefono1",
+                            "label": "Teléfono"
+                        }
+                    ],
+                    "rowclick": "link"
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/layout/masterClientes",
+            "value": {
+                "newRecordTelest": {
+                    "componente": "YBNewRecord",
+                    "class": "info",
+                    "icon": "add"
+                }
+            }
+        },
+        {
+            "type": "deleteNode",
+            "path": "/initValidation",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/focus",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/drawIf",
+            "value": null
         }
-    },
-    "acciones": {}
+    ]
 }

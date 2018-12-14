@@ -1,35 +1,59 @@
 {
-    "querystring": {},
-    "schema": {},
-    "layout": {
-        "newRecordDirclientes": {
-            "prefix": "dirclientes",
-            "componente": "YBForm",
-            "class": "claseGrid",
-            "submit": "create",
-            "success": [{"slot": "return"}],
-            "groupbox": "acordeon",
-            "return": true,
-            "fields": {
-                "gb__datosGenerales": {
-                    "title": "Datos generales",
+    "modifications": [
+        {
+            "type": "insertAfterNode",
+            "path": "/layout/root",
+            "value": {
+                "newRecordDirclientes": {
+                    "prefix": "dirclientes",
+                    "componente": "YBForm",
+                    "class": "claseGrid",
+                    "submit": "create",
+                    "success": [
+                        {
+                            "slot": "return"
+                        }
+                    ],
+                    "groupbox": "acordeon",
+                    "return": true,
                     "fields": {
-                        "descripcion": {},
-                        "dirtipovia": {},
-                        "direccion": {},
-                        "dirnum": {},
-                        "dirotros": {},
-                        "apartado": {},
-                        "codpostal": {},
-                        "ciudad": {},
-                        "idprovincia": {"auto_name": "Provincia"},           
-                        "codpais": {},
-                        "telefono": {}
-                    }
+                        "gb__datosGenerales": {
+                            "title": "Datos generales",
+                            "fields": {
+                                "descripcion": {},
+                                "dirtipovia": {},
+                                "direccion": {},
+                                "dirnum": {},
+                                "dirotros": {},
+                                "apartado": {},
+                                "codpostal": {},
+                                "ciudad": {},
+                                "idprovincia": {
+                                    "auto_name": "Provincia"
+                                },
+                                "codpais": {},
+                                "telefono": {}
+                            }
+                        }
+                    },
+                    "exclude": {}
                 }
-            },
-            "exclude": {}
+            }
+        },
+        {
+            "type": "deleteNode",
+            "path": "/initValidation",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/focus",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/drawIf",
+            "value": null
         }
-    },
-    "acciones": {}
+    ]
 }

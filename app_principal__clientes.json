@@ -1,160 +1,257 @@
 {
-    "querystring": {},
-    "schema": {
-        "dirclientes": {
-            "rel": "codcliente",
-            "querystring": {
-                "p_l": 50,
-                "p_c": 1,
-                "o_1": "-fechaalta"
-            }
-        }
-    },
-    "layout": {
-    	"groupBoxCargaSEPA": {
-            "componente": "YBGroupBox",
-            "className": "",
-            "layout": {
-                "cargaDocSEPA": {
-                    "componente": "YBButton",
-                    "prefix": "clientes",
-                    "label": "S€PA",
-                    "className": "floatRight",
-                    "buttonType": "raised",
-                    "action": {
-                        "key": "subir",
-	                	"label": "Subir doc. SEPA",
-						"success": [{"slot": "toast", "tipo": "success", "mensaje": "Documento cargado correctamente"}, {"slot": "refrescar"}],
-	                    "error": [{"slot": "toast", "mensaje": "Error inesperado, consulte administrador"}]
+    "modifications": [
+        {
+            "type": "insertAfterNode",
+            "path": "/schema/root",
+            "value": {
+                "dirclientes": {
+                    "rel": "codcliente",
+                    "querystring": {
+                        "p_l": 50,
+                        "p_c": 1,
+                        "o_1": "-fechaalta"
                     }
                 }
             }
         },
-        "formRecordClientes": {
-            "prefix": "clientes",
-            "componente": "YBForm",
-            "class": "claseGrid",
-            "submit": "update",
-            "success": [{"slot": "return"}],
-            "groupbox": "acordeon",
-            "return": true,
-            "fields": {
-               "gb__datosGenerales": {
-                    "title": "Datos generales",
-                    "fields": {
-                        "nombre": {},
-                        "tipoidfiscal": {},
-                        "cifnif": {},
-                        "nombrecomercial": {},
-                        "telefono1": {},
-                        "email": {},
-                        "codgrupo": {}
-                    }
-                },
-                "gb__comercial": {
-                    "title": "Comercial",
-                    "fields": {
-                        "codpago": {},
-                        "codserie": {},
-                        "coddivisa": {},
-                        "codtiporappel": {},
-                        "codagente": {},
-                        "regimeniva": {},
-                        "recargo": {},
-                        "riesgomax": {},
-                        "copiasfactura": {},
-                        "riesgoalcanzado": {}
+        {
+            "type": "insertAfterNode",
+            "path": "/layout/root",
+            "value": {
+                "groupBoxCargaSEPA": {
+                    "componente": "YBGroupBox",
+                    "className": "",
+                    "layout": {
+                        "cargaDocSEPA": {
+                            "componente": "YBButton",
+                            "prefix": "clientes",
+                            "label": "S€PA",
+                            "className": "floatRight",
+                            "buttonType": "raised",
+                            "action": {
+                                "key": "subir",
+                                "label": "Subir doc. SEPA",
+                                "success": [
+                                    {
+                                        "slot": "toast",
+                                        "tipo": "success",
+                                        "mensaje": "Documento cargado correctamente"
+                                    },
+                                    {
+                                        "slot": "refrescar"
+                                    }
+                                ],
+                                "error": [
+                                    {
+                                        "slot": "toast",
+                                        "mensaje": "Error inesperado, consulte administrador"
+                                    }
+                                ]
+                            }
+                        }
                     }
                 }
-        	}
-        },      
-        "groupBoxDirecciones": {
-            "componente": "YBGroupBox",
-            "label": "Direcciones",
-            "className": "",
-            "layout": {
-                "dirclientesGrid": {
-                    "label": "Direcciones",
-                    "componente": "YBGrid",
-                    "prefix": "dirclientes",
-                    "className": "claseGrid",
-                    "multiselectable": true,
-                    "columns": [
-                        {"tipo": "field", "key": "descripcion", "width": 60},
-                        {"tipo": "field", "key": "domfacturacion", "width": 20},
-                        {"tipo": "field", "key": "domenvio", "width": 20}
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/layout/groupBoxCargaSEPA",
+            "value": {
+                "formRecordClientes": {
+                    "prefix": "clientes",
+                    "componente": "YBForm",
+                    "class": "claseGrid",
+                    "submit": "update",
+                    "success": [
+                        {
+                            "slot": "return"
+                        }
                     ],
-                    "rowclick": "link",
-                    "accionesGrid": [
-                        {
-                            "tipo": "button",
-                            "key": "direnvio",
-                            "label": "Dirección de envio",
-                            "success": [
-                                {"slot": "refrescar"}
-                            ]
+                    "groupbox": "acordeon",
+                    "return": true,
+                    "fields": {
+                        "gb__datosGenerales": {
+                            "title": "Datos generales",
+                            "fields": {
+                                "nombre": {},
+                                "tipoidfiscal": {},
+                                "cifnif": {},
+                                "nombrecomercial": {},
+                                "telefono1": {},
+                                "email": {},
+                                "codgrupo": {}
+                            }
                         },
-                        {
-                            "tipo": "button",
-                            "key": "dirfacturacion",
-                            "label": "Dirección de facturación",
-                            "success": [
-                                {"slot": "refrescar"}
+                        "gb__comercial": {
+                            "title": "Comercial",
+                            "fields": {
+                                "codpago": {},
+                                "codserie": {},
+                                "coddivisa": {},
+                                "codtiporappel": {},
+                                "codagente": {},
+                                "regimeniva": {},
+                                "recargo": {},
+                                "riesgomax": {},
+                                "copiasfactura": {},
+                                "riesgoalcanzado": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/layout/formRecordClientes",
+            "value": {
+                "groupBoxDirecciones": {
+                    "componente": "YBGroupBox",
+                    "label": "Direcciones",
+                    "className": "",
+                    "layout": {
+                        "dirclientesGrid": {
+                            "label": "Direcciones",
+                            "componente": "YBGrid",
+                            "prefix": "dirclientes",
+                            "className": "claseGrid",
+                            "multiselectable": true,
+                            "columns": [
+                                {
+                                    "tipo": "field",
+                                    "key": "descripcion",
+                                    "width": 60
+                                },
+                                {
+                                    "tipo": "field",
+                                    "key": "domfacturacion",
+                                    "width": 20
+                                },
+                                {
+                                    "tipo": "field",
+                                    "key": "domenvio",
+                                    "width": 20
+                                }
+                            ],
+                            "rowclick": "link",
+                            "accionesGrid": [
+                                {
+                                    "tipo": "button",
+                                    "key": "direnvio",
+                                    "label": "Dirección de envio",
+                                    "success": [
+                                        {
+                                            "slot": "refrescar"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "tipo": "button",
+                                    "key": "dirfacturacion",
+                                    "label": "Dirección de facturación",
+                                    "success": [
+                                        {
+                                            "slot": "refrescar"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "nuevaLinea",
+                                    "label": "Nuevo",
+                                    "success": []
+                                }
                             ]
-                        },
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/acciones/root",
+            "value": {
+                "delete": {
+                    "action": "deleteRow",
+                    "icon": "delete"
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/acciones/delete",
+            "value": {
+                "nuevaLinea": {
+                    "action": "newRow",
+                    "icon": "add_circle"
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/acciones/nuevaLinea",
+            "value": {
+                "direnvio": {
+                    "action": "gridAction",
+                    "icon": "send",
+                    "prefix": "dirclientes",
+                    "serverAction": "cambiarDomEnvio"
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/acciones/direnvio",
+            "value": {
+                "dirfacturacion": {
+                    "action": "gridAction",
+                    "icon": "home",
+                    "prefix": "dirclientes",
+                    "serverAction": "cambiarDomFacturacion"
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/acciones/dirfacturacion",
+            "value": {
+                "subir": {
+                    "action": "legacy",
+                    "prefix": "clientes",
+                    "serverAction": "subirDocSepa",
+                    "icon": "link",
+                    "params": [
                         {
-                            "key": "nuevaLinea",
-                            "label": "Nuevo",
-                            "success": []
+                            "componente": "YBFileInput",
+                            "prefix": "clientes",
+                            "className": "",
+                            "key": "adjunto",
+                            "label": "SUBIR",
+                            "tipo": 30,
+                            "style": {
+                                "width": "100%"
+                            },
+                            "action": "subirDocSepa",
+                            "autoUpload": false,
+                            "fileRequired": true
                         }
                     ]
                 }
             }
+        },
+        {
+            "type": "deleteNode",
+            "path": "/initValidation",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/focus",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/drawIf",
+            "value": null
         }
-    },
-    "acciones": {
-        "delete": {
-            "action": "deleteRow",
-            "icon": "delete"
-        },
-        "nuevaLinea": {
-            "action": "newRow",
-            "icon": "add_circle"
-        },
-        "direnvio": {
-            "action": "gridAction",
-            "icon": "send",
-            "prefix": "dirclientes",
-            "serverAction": "cambiarDomEnvio"
-        },
-        "dirfacturacion": {
-            "action": "gridAction",
-            "icon": "home",
-            "prefix": "dirclientes",
-            "serverAction": "cambiarDomFacturacion"
-        },
-        "subir": {
-            "action": "legacy",
-            "prefix": "clientes",
-            "serverAction": "subirDocSepa",
-            "icon": "link",
-            "params": [
-                {
-                    "componente": "YBFileInput",
-                    "prefix": "otros",
-                    "className": "",
-                    "key": "adjunto",
-                    "label": "SUBIR",
-                    "prefix": "clientes",
-                    "tipo": 30,
-                    "style": {
-                        "width": "100%"
-                    },
-                    "action": "subirDocSepa",
-                    "autoUpload": false,
-                    "fileRequired": true
-                }
-            ]
-        }
-    }
+    ]
 }

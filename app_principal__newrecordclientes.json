@@ -1,67 +1,92 @@
 {
-    "querystring": {},
-    "schema": {
-        "dirclientes": {
-            "rel": "codcliente",
-            "querystring": {},
-            "create": true
-        }
-    },
-    "layout": {
-        "multiNewRecordClientes": {
-            "componente": "YBMultiForm",
-            "mainPrefix": "clientes",           
-            "submit": "create",
-            "return": true,
-            "saveEdit": true,
-            "saveReturn": true,
-            "forms": {
-                "formClientes": {
-                    "componente": "YBForm",
-                    "prefix": "clientes",
-                    "class": "claseGrid",
-                    "groupbox": "acordeon",
-                    "fields": {
-                        "gb__datosGenerales": {
-                            "title": "Datos generales",
-                            "fields": {
-                                "nombre": {},
-                                "tipoidfiscal": {},
-                                "cifnif": {},
-                                "nombrecomercial": {},
-                                "telefono1": {},
-                                "email": {}
-                            }
-                        }
-                    },
-                    "exclude": {}
-                },
-                "formDireccion": {
-                    "componente": "YBForm",
-                    "prefix": "dirclientes",
-                    "class": "claseGrid",
-                    "groupbox": "acordeon",
-                    "fields": {
-                        "gb__Direccion": {
-                            "title": "",
-                            "fields": {
-                                "dirtipovia": {},
-                                "direccion": {},
-                                "dirnum": {},
-                                "dirotros": {},
-                                "apartado": {},
-                                "codpostal": {},
-                                "ciudad": {},
-                                "idprovincia": {"auto_name": "Provincia"},                        
-                                "codpais": {},
-                                "telefono": {}
-                            }
-                        }
-                    },
-                    "exclude": {}
+    "modifications": [
+        {
+            "type": "insertAfterNode",
+            "path": "/schema/root",
+            "value": {
+                "dirclientes": {
+                    "rel": "codcliente",
+                    "querystring": {},
+                    "create": true
                 }
             }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/layout/root",
+            "value": {
+                "multiNewRecordClientes": {
+                    "componente": "YBMultiForm",
+                    "mainPrefix": "clientes",
+                    "submit": "create",
+                    "return": true,
+                    "saveEdit": true,
+                    "saveReturn": true,
+                    "forms": {
+                        "formClientes": {
+                            "componente": "YBForm",
+                            "prefix": "clientes",
+                            "class": "claseGrid",
+                            "groupbox": "acordeon",
+                            "fields": {
+                                "gb__datosGenerales": {
+                                    "title": "Datos generales",
+                                    "fields": {
+                                        "nombre": {},
+                                        "tipoidfiscal": {},
+                                        "cifnif": {},
+                                        "nombrecomercial": {},
+                                        "telefono1": {},
+                                        "email": {}
+                                    }
+                                }
+                            },
+                            "exclude": {}
+                        },
+                        "formDireccion": {
+                            "componente": "YBForm",
+                            "prefix": "dirclientes",
+                            "class": "claseGrid",
+                            "groupbox": "acordeon",
+                            "fields": {
+                                "gb__Direccion": {
+                                    "title": "",
+                                    "fields": {
+                                        "dirtipovia": {},
+                                        "direccion": {},
+                                        "dirnum": {},
+                                        "dirotros": {},
+                                        "apartado": {},
+                                        "codpostal": {},
+                                        "ciudad": {},
+                                        "idprovincia": {
+                                            "auto_name": "Provincia"
+                                        },
+                                        "codpais": {},
+                                        "telefono": {}
+                                    }
+                                }
+                            },
+                            "exclude": {}
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "deleteNode",
+            "path": "/initValidation",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/focus",
+            "value": null
+        },
+        {
+            "type": "deleteNode",
+            "path": "/drawIf",
+            "value": null
         }
-    },
-    "acciones": {}
+    ]
 }
