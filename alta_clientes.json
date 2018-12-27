@@ -4,10 +4,6 @@
             {
                 "path": "config/",
                 "name": "dependencias.json"
-            },
-            {
-                "name": "settings.py",
-                "path": "AQNEXT/"
             }
         ],
         "patchJson": [

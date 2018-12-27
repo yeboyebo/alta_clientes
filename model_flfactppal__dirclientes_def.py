@@ -40,7 +40,7 @@ class alta_clientes(flfactppal):
         return True
 
     def __init__(self, context=None):
-        super(alta_clientes, self).__init__(context)
+        super().__init__(context)
 
     def cambiarDomFacturacion(self, model, oParam):
         return self.ctx.alta_clientes_cambiarDomFacturacion(model, oParam)

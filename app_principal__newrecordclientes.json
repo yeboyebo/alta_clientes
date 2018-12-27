@@ -72,21 +72,6 @@
                     }
                 }
             }
-        },
-        {
-            "type": "deleteNode",
-            "path": "/initValidation",
-            "value": null
-        },
-        {
-            "type": "deleteNode",
-            "path": "/focus",
-            "value": null
-        },
-        {
-            "type": "deleteNode",
-            "path": "/drawIf",
-            "value": null
         }
     ]
 }
