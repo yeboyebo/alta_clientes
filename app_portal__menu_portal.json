@@ -7,6 +7,7 @@
                 "NAME": "principal",
                 "TEXT": "PRINCIPAL",
                 "ICON": "dashboard",
+                "URL": "principal",
                 "VISIBLE": true,
                 "COLOR": "rgb(170, 30, 30)"
             }

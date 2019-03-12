@@ -29,7 +29,7 @@
                                 "codpostal": {},
                                 "ciudad": {},
                                 "idprovincia": {
-                                    "auto_name": "Provincia"
+                                    "label": "Provincia"
                                 },
                                 "codpais": {},
                                 "telefono": {}
